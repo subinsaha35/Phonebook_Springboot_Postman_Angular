@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "b9d5e8b4-a337-4cfd-a981-0aacaab3a46c",
+		"name": "Contact",
+		"description": "Postman link for the backend Spring boot Contact App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllContacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getAllContacts.api",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAllContacts.api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getContact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/getContact.api/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getContact.api",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteContact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contacts/1/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addContact",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {      \r\n        \"firstName\": \"Sukcbdb\",\r\n        \"lastName\": \"Shcdycban\",\r\n        \"phoneNumber\": 7891624926,\r\n        \"email\": \"nmman@gmail.com\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/contacts/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"contacts",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
